@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مقاولات عامة ونجارة وديكورات في جدة</title>
+<meta name="description" content="مقاولات عامة، نجارة، موبيليا، ديكورات جبس ودهانات في جدة. اتصل بنا: 0510785161">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">مقاولات وديكورات جدة</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+      <a href="index.html" aria-current="page">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="index.html#services">خدماتنا</a>
+      <a href="index.html#works">أعمالنا</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="tel:0510785161" class="nav-call">اتصل الآن</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== الواجهة ========== -->
+<div class="hero" aria-roledescription="carousel" aria-label="صور من أعمالنا">
+  <div class="slide active"><img src="1.jpeg" alt="من أعمالنا" onerror="this.style.display='none'"></div>
+  <div class="slide"><img src="2.jpeg" alt="من أعمالنا" onerror="this.style.display='none'"></div>
+  <div class="slide"><img src="3.jpeg" alt="من أعمالنا" onerror="this.style.display='none'"></div>
+  <div class="slide"><img src="4.jpeg" alt="من أعمالنا" onerror="this.style.display='none'"></div>
+  <div class="slide"><img src="5.jpeg" alt="من أعمالنا" onerror="this.style.display='none'"></div>
+
+  <div class="hero-content">
+    <div class="wrap">
+      <h1>نبني ونجهّز بيتك من الأساس للتشطيب</h1>
+      <p>مقاولات عامة، نجارة وموبيليا، ديكورات جبس ودهانات، في جدة وما حولها.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" href="https://wa.me/966510785161" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4.03 8.36 4.03 14.97c0 2.35.68 4.55 1.86 6.4L4 28l6.82-1.79a11.94 11.94 0 0 0 5.2 1.19h.01c6.61 0 11.98-5.37 11.98-11.98C28 8.36 22.63 3 16.02 3z"/></svg>
+          تواصل واتساب
+        </a>
+        <a class="btn btn-ghost" href="#works">شاهد أعمالنا</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-ctrl">
+    <div class="wrap">
+      <div class="dots" id="dots" aria-label="اختيار الصورة"></div>
+      <div class="arrows">
+        <button type="button" id="heroNext" aria-label="الصورة التالية"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="heroPrev" aria-label="الصورة السابقة"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- ========== نبذة ========== -->
+  <section class="about-teaser bg-paper">
+    <div class="wrap">
+      <div>
+        <div class="sec-head"><h2>من نحن</h2></div>
+        <p class="lead">فريق متخصص في المقاولات العامة والتشطيبات في جدة، نتولى شغلك من أول القياس لحد التسليم.</p>
+        <p>نشتغل في النجارة والموبيليا وديكورات الجبس والدهانات تحت إشراف واحد، فمش هتحتاج تدوّر على أكتر من مقاول لمشروع واحد.</p>
+        <a class="btn btn-dark" href="about.html">اعرف أكتر عنا</a>
+      </div>
+      <div class="about-photo"><img src="6.jpeg" alt="جانب من أعمالنا" onerror="this.style.display='none'"></div>
+    </div>
+  </section>
+
+  <!-- ========== الخدمات ========== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>خدماتنا</h2>
+        <p>شغل نظيف، خامات مضمونة، وتسليم في الميعاد.</p>
+      </div>
+      <ul class="service-list">
+        <li><h3>مقاولات عامة</h3><p>بناء وترميم وتشطيب للفلل والشقق والمحلات، من الفكرة لحد التسليم.</p></li>
+        <li><h3>نجارة</h3><p>أبواب وشبابيك ومطابخ وغرف نوم وخزائن حسب المقاس والتصميم اللي تختاره.</p></li>
+        <li><h3>موبيليا</h3><p>تفصيل وتنجيد وصيانة الأثاث للمنازل والمكاتب.</p></li>
+        <li><h3>ديكورات جبس</h3><p>أسقف معلقة، إضاءة مخفية، كرانيش ومشغولات جبسية بتصاميم حديثة وكلاسيك.</p></li>
+        <li><h3>دهانات</h3><p>دهانات داخلية وخارجية، معجون وأوجه، ودهانات ديكورية بألوان وتأثيرات مختلفة.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== لماذا نحن ========== -->
+  <section class="bg-paper">
+    <div class="wrap">
+      <div class="sec-head"><h2>ليه تختارنا</h2></div>
+      <div class="why-grid">
+        <div><h3>كل التخصصات في مكان واحد</h3><p>نجارة وجبس ودهانات ومقاولات، يعني تنسيق أسهل ووقت أقل.</p></div>
+        <div><h3>شغل على المقاس</h3><p>بننفذ حسب مساحة مكانك وذوقك، مش تصاميم جاهزة مفروضة عليك.</p></div>
+        <div><h3>خامات مضمونة</h3><p>بنستخدم خامات نتأكد من جودتها، والنتيجة بتبان في التشطيب النهائي.</p></div>
+        <div><h3>التزام بالمواعيد</h3><p>بنتفق معاك على جدول واضح ونمشي عليه لحد التسليم.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== خطوات العمل ========== -->
+  <section class="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>إزاي بنشتغل</h2>
+        <p>أربع خطوات واضحة من أول تواصل لحد استلام الشغل.</p>
+      </div>
+      <ol>
+        <li><h3>تواصل ومعاينة</h3><p>كلمنا أو ابعت صور المكان، ونحدد موعد معاينة لو لزم.</p></li>
+        <li><h3>عرض السعر</h3><p>بنحدد المطلوب ونقدم لك سعر واضح قبل ما نبدأ.</p></li>
+        <li><h3>التنفيذ</h3><p>الفريق بيبدأ الشغل وبنبقى على تواصل معاك في كل مرحلة.</p></li>
+        <li><h3>التسليم</h3><p>بنراجع الشغل معاك ونسلّم بعد ما تطمن على كل التفاصيل.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== أهم أعمالنا ========== -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>أهم أعمالنا</h2>
+        <p>اضغط على أي صورة أو فيديو لتكبيره.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- ========== شريط الدعوة ========== -->
+  <div class="cta-strip">
+    <div class="wrap">
+      <div>
+        <h2>عندك مشروع في جدة؟</h2>
+        <p>ابعت لنا صور المكان وهنرد عليك بسعر تقريبي.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-dark" href="https://wa.me/966510785161" target="_blank" rel="noopener">واتساب</a>
+        <a class="btn btn-ghost" style="border-color:#1b1408;color:#1b1408" href="contact.html">صفحة التواصل</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== التواصل ========== -->
+  <section class="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>اتصل بنا</h2>
+        <p>جدة، المملكة العربية السعودية</p>
+      </div>
+      <div class="contact-grid">
+        <a class="phone-num" href="tel:0510785161">0510785161</a>
+        <a class="btn btn-brass" href="tel:0510785161">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+          اتصل الآن
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> مقاولات وديكورات جدة. جميع الحقوق محفوظة.</div>
+    <nav aria-label="روابط سفلية">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- الشاشة المكبرة -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الوسائط">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="إغلاق">&times;</button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="التالي">&#8249;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="السابق">&#8250;</button>
+  <img id="lbImg" src="" alt="">
+  <video id="lbVid" controls playsinline style="display:none"></video>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

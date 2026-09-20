@@ -1,0 +1,261 @@
+:root{
+  --ink:#1e2926;
+  --ink-2:#2c3a36;
+  --plaster:#eff0ec;
+  --paper:#ffffff;
+  --brass:#b08a4a;
+  --brass-dark:#8c6c34;
+  --muted:#5d6a66;
+  --line:#d9dcd5;
+  --wa:#25d366;
+  --call:#1e6bd6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{
+  font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;
+  background:var(--plaster);color:var(--ink);line-height:1.8;-webkit-text-size-adjust:100%;
+}
+h1,h2,h3{font-family:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.35}
+a{color:inherit}
+img,video{max-width:100%}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+
+/* ---------- شريط التنقل ---------- */
+.site-header{
+  position:sticky;top:0;z-index:60;background:var(--ink);color:#fff;
+  box-shadow:0 2px 12px rgba(0,0,0,.25);
+}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{font-family:"Reem Kufi",Tahoma,sans-serif;font-weight:700;font-size:1.25rem;color:#fff;text-decoration:none;white-space:nowrap}
+.main-nav{display:flex;align-items:center;gap:6px}
+.main-nav a{
+  color:#e6e8e2;text-decoration:none;font-size:.97rem;padding:8px 14px;border-radius:6px;
+}
+.main-nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.main-nav a[aria-current="page"]{color:var(--brass);font-weight:600}
+.main-nav .nav-call{
+  background:var(--brass);color:#1b1408;font-weight:600;margin-inline-start:8px;
+}
+.main-nav .nav-call:hover{background:#c49b58;color:#1b1408}
+.nav-toggle{
+  display:none;width:44px;height:44px;border:0;border-radius:6px;background:transparent;cursor:pointer;
+  color:#fff;place-items:center;
+}
+.nav-toggle svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round}
+
+/* ---------- الأزرار ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:6px;
+  font:inherit;font-weight:600;text-decoration:none;cursor:pointer;border:2px solid transparent;
+}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.btn-wa{background:var(--wa);color:#08301a}
+.btn-wa:hover{background:#3ee07b}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-brass{background:var(--brass);color:#1b1408}
+.btn-brass:hover{background:#c49b58}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+
+/* ---------- الواجهة (عارض الصور) ---------- */
+.hero{position:relative;height:min(80vh,680px);min-height:460px;background:var(--ink);overflow:hidden;color:#fff}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.slide.active{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(20,28,25,.9) 0%,rgba(20,28,25,.45) 50%,rgba(20,28,25,.5) 100%);
+}
+.hero-content{position:absolute;z-index:2;inset:auto 0 84px 0}
+.hero h1{font-size:clamp(2rem,5.6vw,3.6rem);font-weight:700;max-width:16ch}
+.hero p{margin-top:14px;max-width:46ch;font-size:1.05rem;color:#e6e8e2}
+.hero-actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctrl{position:absolute;z-index:3;inset:auto 0 26px 0}
+.hero-ctrl .wrap{display:flex;align-items:center;justify-content:space-between}
+.dots{display:flex;gap:8px}
+.dots button{width:34px;height:5px;border:0;border-radius:3px;background:rgba(255,255,255,.4);cursor:pointer;padding:0}
+.dots button.active{background:var(--brass)}
+.arrows{display:flex;gap:8px}
+.arrows button{
+  width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);
+  background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;
+}
+.arrows button:hover{background:rgba(255,255,255,.15)}
+.arrows svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- ترويسة الصفحات الداخلية ---------- */
+.page-hero{background:var(--ink-2);color:#fff;padding:56px 0 48px}
+.page-hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700}
+.page-hero p{margin-top:8px;color:#c9cfca;max-width:56ch}
+
+/* ---------- عام للأقسام ---------- */
+section{padding:72px 0}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:700}
+.sec-head p{color:var(--muted);margin-top:6px;max-width:60ch}
+.bg-paper{background:var(--paper)}
+
+/* ---------- نبذة ---------- */
+.about-teaser .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.about-teaser p{color:var(--muted);margin-bottom:14px;max-width:62ch}
+.about-teaser .lead{font-size:1.15rem;color:var(--ink)}
+.about-photo{aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:#cfd3cb}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---------- الخدمات ---------- */
+.service-list{list-style:none;border-top:1px solid var(--line)}
+.service-list li{
+  display:grid;grid-template-columns:minmax(150px,240px) 1fr;gap:20px;
+  padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.service-list h3{font-size:1.35rem;color:var(--brass-dark)}
+.service-list p{color:var(--muted)}
+
+/* ---------- لماذا نحن ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.why-grid div{padding:22px 0;border-top:2px solid var(--ink)}
+.why-grid h3{font-size:1.2rem;margin-bottom:4px}
+.why-grid p{color:var(--muted)}
+
+/* ---------- خطوات العمل ---------- */
+.steps{background:var(--ink);color:#fff}
+.steps .sec-head p{color:#b9c0bb}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--brass);padding-top:16px}
+.steps li::before{
+  content:counter(s);font-family:"Reem Kufi",Tahoma,sans-serif;font-size:2rem;color:var(--brass);display:block;line-height:1.2;
+}
+.steps h3{font-size:1.2rem;margin:4px 0}
+.steps p{color:#b9c0bb;font-size:.95rem}
+
+/* ---------- معرض الأعمال ---------- */
+.gallery{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+.gallery button{
+  border:0;padding:0;cursor:pointer;background:#cfd3cb;position:relative;
+  aspect-ratio:4/3;overflow:hidden;border-radius:4px;display:block;
+}
+.gallery img,.gallery video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;pointer-events:none}
+.gallery button:hover img,.gallery button:hover video{transform:scale(1.05)}
+.gallery .is-video::after{
+  content:"";position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;
+  background:rgba(20,28,25,.7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 6.5v11l9-5.5z'/%3E%3C/svg%3E") center/60% no-repeat;
+  border:2px solid rgba(255,255,255,.85);
+}
+
+/* ---------- الشاشة المكبرة ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:100;background:rgba(12,16,15,.95);
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.lightbox.open{display:flex}
+.lightbox img,.lightbox video{max-width:100%;max-height:84vh;border-radius:4px;display:block}
+.lb-btn{
+  position:absolute;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.12);
+  border:0;color:#fff;font-size:1.6rem;cursor:pointer;display:grid;place-items:center;z-index:2;
+}
+.lb-btn:hover{background:rgba(255,255,255,.25)}
+.lb-close{top:16px;left:16px}
+.lb-next{left:14px;top:50%;transform:translateY(-50%)}
+.lb-prev{right:14px;top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#cfd3cb;font-size:.9rem}
+
+/* ---------- شريط الدعوة ---------- */
+.cta-strip{background:var(--brass);color:#1b1408;padding:44px 0}
+.cta-strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.cta-strip h2{font-size:clamp(1.4rem,3vw,2rem)}
+.cta-strip p{margin-top:2px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- صفحة من نحن ---------- */
+.prose{max-width:70ch}
+.prose p{color:var(--muted);margin-bottom:16px}
+.prose p.lead{color:var(--ink);font-size:1.2rem}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.values{list-style:none;border-top:1px solid var(--line)}
+.values li{padding:18px 0;border-bottom:1px solid var(--line)}
+.values h3{font-size:1.15rem;color:var(--brass-dark)}
+.values p{color:var(--muted)}
+
+/* ---------- صفحة التواصل ---------- */
+.contact-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+.info-list{list-style:none;border-top:1px solid var(--line)}
+.info-list li{padding:18px 0;border-bottom:1px solid var(--line)}
+.info-list h3{font-size:1.05rem;color:var(--brass-dark);margin-bottom:2px}
+.info-list a,.info-list span{font-size:1.15rem;text-decoration:none}
+.info-list .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.info-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.form-box{background:var(--paper);padding:28px;border-radius:8px;border:1px solid var(--line)}
+.form-box h2{font-size:1.5rem;margin-bottom:4px}
+.form-box > p{color:var(--muted);margin-bottom:18px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:600;margin-bottom:4px}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;padding:11px 12px;border:1.5px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);
+}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
+.map-box{margin-top:48px;border-radius:8px;overflow:hidden;border:1px solid var(--line);height:340px}
+.map-box iframe{width:100%;height:100%;border:0;display:block}
+
+/* ---------- تواصل سريع (الرئيسية) ---------- */
+.contact{background:var(--ink);color:#fff}
+.contact .sec-head p{color:#b9c0bb}
+.contact-grid{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.phone-num{
+  font-family:"Reem Kufi",Tahoma,sans-serif;font-size:clamp(1.8rem,5vw,2.6rem);
+  direction:ltr;unicode-bidi:isolate;color:var(--brass);text-decoration:none;margin-inline-end:12px;
+}
+
+footer{background:#161f1c;color:#9aa5a0;padding:28px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer nav{display:flex;flex-wrap:wrap;gap:16px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+
+/* ---------- الأزرار العائمة ---------- */
+.float-btns{
+  position:fixed;left:16px;bottom:16px;z-index:50;display:flex;flex-direction:column;gap:12px;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.float-btns a{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  box-shadow:0 6px 16px rgba(0,0,0,.3);transition:transform .2s ease;
+}
+.float-btns a:hover{transform:scale(1.08)}
+.float-btns svg{width:30px;height:30px;fill:#fff}
+.fb-wa{background:var(--wa)}
+.fb-call{background:var(--call)}
+
+/* ---------- الجوال ---------- */
+@media (max-width:860px){
+  .nav-toggle{display:grid}
+  .main-nav{
+    display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);
+    flex-direction:column;align-items:stretch;padding:8px 16px 16px;gap:2px;
+    border-top:1px solid rgba(255,255,255,.12);box-shadow:0 12px 20px rgba(0,0,0,.25);
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:12px 10px}
+  .main-nav .nav-call{margin:8px 0 0;text-align:center}
+  .about-teaser .wrap,.split,.contact-layout{grid-template-columns:1fr;gap:28px}
+  .steps ol{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .hero{min-height:520px}
+  .hero-content{bottom:92px}
+  .service-list li{grid-template-columns:1fr;gap:2px}
+  .why-grid{grid-template-columns:1fr}
+  .steps ol{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:8px}
+  section{padding:52px 0}
+  .arrows{display:none}
+  .form-box{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .slide{transition:none}
+  .gallery img,.gallery video,.float-btns a{transition:none}
+  html{scroll-behavior:auto}
+}
