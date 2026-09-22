@@ -259,3 +259,85 @@ footer a:hover{color:#fff;text-decoration:underline}
   .gallery img,.gallery video,.float-btns a{transition:none}
   html{scroll-behavior:auto}
 }
+/* =========================================
+   LOGO - NAVBAR
+========================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: inherit;
+
+  white-space: nowrap;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+  display: block;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* حركة بسيطة عند المرور على اللوجو */
+.brand:hover .brand-logo {
+  transform: scale(1.07);
+}
+
+
+/* اسم الشركة */
+.brand span {
+  font-family: "Reem Kufi", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   NAVBAR MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .brand span {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand span {
+    font-size: 12px;
+  }
+
+}
